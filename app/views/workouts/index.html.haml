@@ -1,6 +1,6 @@
-%h1 This is the Workouts#Index placeholder
-
-- @workouts.each do |workout|
-  %h2= link_to workout.date, workout
-  %p= workout.workout
-  %p= workout.length
+#index_workouts
+  - @workouts.each do |workout|
+    %h2= link_to workout.date.strftime("%A %B %m"), workout
+    %h3
+      %span Workout:
+      = workout.workout
